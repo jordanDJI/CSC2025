@@ -1,0 +1,144 @@
+#firstSection4 {
+    margin-top: 130px;
+    background: black;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    height: 500px; /* Ajuste selon ta préférence */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Effet de flou */
+    opacity: 0.6; /* Ajuste l'opacité pour voir l'image du dessus */
+    z-index: 0;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Met au-dessus de l’arrière-plan flouté */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Affiche l’image entièrement sans la couper */
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+
+/* Animation du slider */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+#secondSection4
+{
+    background: white;
+    height: 500px;
+    padding: 5%;
+}
+/* iframe
+{
+    height: 400px;
+    width: 600px;
+} */
+.myvideo {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Limite la largeur de la vidéo */
+    margin: 0 auto;
+}
+
+.myvideo iframe {
+    width: 100%;
+    height: 450px; /* Taille par défaut */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .myvideo iframe {
+        height: 300px; /* Hauteur réduite sur mobile */
+    }
+}
+
+#thirdSection
+{
+    background: #f0f3f8;
+    height: 2000px;
+    padding: 5%;
+}
+.gallerie1 {
+    height: 580px;
+    width: 870px;
+    margin-bottom: 40px;
+    border-radius: 0% 100% 23% 77% / 100% 25% 75% 0%;
+    overflow: hidden; /* Évite tout dépassement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none; /* Supprime l’image de fond */
+}
+
+/* Styles pour l'iframe YouTube */
+.gallerie1 iframe {
+    width: 100%;
+    height: 450px; /* Taille par défaut */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: inherit; /* Applique le même arrondi que .gallerie1 */
+}
+
+
+
+@media (max-width: 1000px) {
+    .gallerie1,.gallerie2,.gallerie3
+    {
+        width: 600px;
+        height: 400px;
+    }
+    iframe
+    {
+        height: 300px;
+        width: 500px;
+    }
+}
+@media (max-width: 850px) {
+    iframe
+    {
+        height: 200px;
+        width: 400px;
+    }
+    #thirdSection
+    {
+        display: none;
+    }
+}
