@@ -50,9 +50,9 @@
 
 .slider {
     display: flex;
-    width: 200%;
+    width: 500%;
     height: 100%;
-    animation: slide 10s infinite ease-in-out; /* Durée de l'animation */
+    animation: slide 60s infinite ease-in-out; /* Durée de l'animation */
 }
 
 .slider img {
