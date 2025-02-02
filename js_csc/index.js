@@ -47,34 +47,36 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   });
-  document.addEventListener("DOMContentLoaded", function () {
-    let slider = document.querySelector(".slider");
-    let images = document.querySelectorAll(".slider img");
-    let index = 0;
+//   document.addEventListener("DOMContentLoaded", function () {
+//     let slider = document.querySelector(".slider");
+//     let images = document.querySelectorAll(".slider img");
+//     let index = 0;
     
-    function nextSlide() {
-        index++;
-        if (index >= images.length) {
-            index = 0;
-        }
-        updateSlider();
-    }
+//     function nextSlide() {
+//         index++;
+//         if (index >= images.length) {
+//             index = 0;
+//         }
+//         updateSlider();
+//     }
     
-    function prevSlide() {
-        index--;
-        if (index < 0) {
-            index = images.length - 1;
-        }
-        updateSlider();
-    }
+//     function prevSlide() {
+//         index--;
+//         if (index < 0) {
+//             index = images.length - 1;
+//         }
+//         updateSlider();
+//     }
     
-    function updateSlider() {
-        slider.style.transform = `translateX(${-index * 100}%)`;
-    }
+//     function updateSlider() {
+//         slider.style.transform = `translateX(${-index * 100}%)`;
+//     }
 
-    // Change d'image toutes les 3 secondes
-    setInterval(nextSlide, 6000);
-});
+//     // Change d'image toutes les 3 secondes
+//     setInterval(nextSlide, 6000);
+// });
+
+
 // document.addEventListener("DOMContentLoaded", function () {
 //     const images = document.querySelectorAll(".slider img");
 //     const blurredBg = document.getElementById("blurred-bg");

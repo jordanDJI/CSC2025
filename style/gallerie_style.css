@@ -1,48 +1,65 @@
 #firstSection4 {
     margin-top: 130px;
-    background: black;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-.slider-container {
-    width: 100%;
-    height: 500px; /* Ajuste selon ta préférence */
-    overflow: hidden;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.slider-bg {
+/* Arrière-plan flouté appliqué uniquement sur l'image */
+#firstSection4::before {
+    content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background: url(../images/backg.jpg) no-repeat center center;
     background-size: cover;
-    background-position: center;
-    filter: blur(10px); /* Effet de flou */
-    opacity: 0.6; /* Ajuste l'opacité pour voir l'image du dessus */
-    z-index: 0;
+    filter: blur(10px);  /* Floute seulement l'image */
+    opacity: 0.9;  /* Réduit la visibilité */
+    z-index: 0;  /* Place derrière les autres éléments */
+}
+
+/* Contenu principal non flouté */
+#firstSection4 .content {
+    position: relative;
+    z-index: 1;  /* Assure que le texte et autres éléments sont nets */
+    color: rgb(53, 49, 49); /* Ajoute une couleur pour un bon contraste */
+    text-align: center;
+}
+
+
+.slider-container {
+    width: 90%;
+    max-width: 1000px;
+    height: 100%; /* Ajuste selon ta préférence */
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+
+/* Chaque image */
+.slide {
+    width: 100%;
+    flex: 0 0 100%;
 }
 
 .slider {
     display: flex;
-    width: 100%;
+    width: 400%;
     height: 100%;
-    position: relative;
-    z-index: 1; /* Met au-dessus de l’arrière-plan flouté */
+    animation: slide 40s infinite; /* Durée de l'animation */
 }
 
 .slider img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Affiche l’image entièrement sans la couper */
-    position: relative;
-    z-index: 2;
+    object-fit: cover; /* Affiche l’image entièrement sans la couper */
+
 }
 
 
