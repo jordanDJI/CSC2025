@@ -50,9 +50,9 @@
 
 .slider {
     display: flex;
-    width: 500%;
+    width: 1000%;
     height: 100%;
-    animation: slide 60s infinite ease-in-out; /* Durée de l'animation */
+    animation: slide 30s infinite ease-in-out; /* Durée de l'animation */
 }
 
 .slider img {
@@ -70,11 +70,16 @@
 /* Animation du slider */
 @keyframes slide {
     0% { transform: translateX(0); }
+    20% { transform: translateX(0); } /* Pause sur la 1ère image */
     25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); } /* Pause sur la 2ème image */
     50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); } /* Pause sur la 3ème image */
     75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); } /* Pause sur la 4ème image */
     100% { transform: translateX(0); }
 }
+
 
 #secondSection4
 {
